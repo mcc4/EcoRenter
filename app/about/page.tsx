@@ -11,8 +11,7 @@ const page = () => {
             <Heading title="About us" />
             <div className="flex  mt-2">
               <p>
-                We started in 2024 during the height of the environmental and
-                economic crisis. We are focused on providing a platform for
+                We started in 2024 during the height of the environmental crisis. We are focused on providing a platform for
                 people to rent items from each other and add to the circular
                 economy. With the amount of waste produced in the world we aim
                 to reduce waste and create communities of people who rent items
