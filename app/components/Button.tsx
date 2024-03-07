@@ -43,7 +43,8 @@ const Button: React.FC<ButtonProps> = ({
         ${outline ? "bg-white" : "bg-green-500"}
         ${outline ? "border-black" : "border-green-500"}
         ${outline ? "text-black" : "text-white"}
-        ${outline ? "hover:shadow-md" : "hover:bg-green-700 hover:border-green-700"}
+        ${outline ? "" : "hover:bg-green-700 hover:border-green-700"}
+        ${outline && label ? "hover:shadow-md " : "text-neutral-600"}
         ${small ? "text-sm" : "text-md"}
         ${small ? "py-2 px-3" : "py-3"}
         ${small ? "font-semibold" : "font-semibold"}
@@ -54,12 +55,11 @@ const Button: React.FC<ButtonProps> = ({
     >
       {Icon && (
         <Icon
-          size={24}
-          className="
-            absolute
-            left-4
-            top-3
-          "
+        size={24}
+        className={`
+          ${label ? 'absolute left-4 top-3' : ''}
+        `}
+          
         />
       )}
       {label}
