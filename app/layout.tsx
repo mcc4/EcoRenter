@@ -11,6 +11,7 @@ import ToasterProvider from "@/app/providers/ToasterProvider";
 import "./globals.css";
 import ClientOnly from "./components/ClientOnly";
 import getCurrentUser from "./actions/getCurrentUser";
+import Footer from "./components/footer/Footer";
 
 export const metadata = {
   title: "EcoRenter | Renting made easy",
@@ -31,13 +32,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-          <ToasterProvider />
-          <LoginModal />
-          <RegisterModal />
-          <SearchModal />
-          <RentModal />
-          <Navbar currentUser={currentUser} />
-        <div className="pb-20 pt-28">{children}</div>
+        <ToasterProvider />
+        <LoginModal />
+        <RegisterModal />
+        <SearchModal />
+        <RentModal />
+        <Navbar currentUser={currentUser} />
+        <div className="pb-20 pt-28 relative h-full">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

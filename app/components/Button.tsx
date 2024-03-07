@@ -11,6 +11,7 @@ interface ButtonProps {
   small?: boolean;
   arrow?: boolean;
   icon?: IconType;
+  none?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   outline,
   small,
   arrow,
+  none,
   icon: Icon,
 }) => {
   return (
@@ -48,6 +50,7 @@ const Button: React.FC<ButtonProps> = ({
         ${small ? "font-semibold" : "font-semibold"}
         ${small ? "border-[1px]" : "border-2"}
         ${arrow ? "pr-6" : ""}
+        ${none ? "border-none bg-transparent hover:" : ""}
       `}
     >
       {Icon && (

@@ -14,7 +14,7 @@ const Footer = () => {
   const loginModal = useLoginModal();
   return (
     <div className="absolute bottom-0 w-full bg-neutral-100 px-2 py-4 text-neutral-600 text-center">
-      <div className="flex md:hidden flex-row cursor-pointer items-center ">
+      <div className="flex md:hidden flex-row cursor-pointer items-center">
         <Button
           onClick={() => router.push("/")}
           label=""

@@ -7,11 +7,15 @@ interface MenuItemProps {
   className?: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ onClick, label, children, className }) => {
+const MenuItem: React.FC<MenuItemProps> = ({
+  onClick,
+  label,
+  children,
+  className,
+}) => {
   return (
     <div
       onClick={onClick}
-
       className={`
       ${className}
         px-4 
