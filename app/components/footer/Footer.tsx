@@ -19,23 +19,15 @@ const Footer = () => {
           onClick={() => router.push("/")}
           label=""
           icon={IoMdHome}
-          outline
           none
         />
         <Button
           onClick={() => router.push("/favorites")}
           label=""
           icon={AiFillHeart}
-          outline
           none
         />
-        <Button
-          onClick={loginModal.onOpen}
-          icon={FaUser}
-          label=""
-          outline
-          none
-        />
+        <Button onClick={loginModal.onOpen} icon={FaUser} label="" none />
       </div>
       <div className="hidden md:flex">
         <div className="flex flex-row items-center justify-center gap-4">

@@ -40,26 +40,25 @@ const Button: React.FC<ButtonProps> = ({
         items-center 
         group
         transition-all
+
         ${outline ? "bg-white" : "bg-green-500"}
         ${outline ? "border-black" : "border-green-500"}
-        ${outline ? "text-black" : "text-white"}
+        ${outline ? "text-black hover:shadow-md" : "text-white"}
+        ${none ? "border-none bg-transparent shadow-none hover:shadow-none !text-neutral-600 hover:bg-transparent" : ""}
         ${outline ? "" : "hover:bg-green-700 hover:border-green-700"}
-        ${outline && label ? "hover:shadow-md " : "text-neutral-600"}
         ${small ? "text-sm" : "text-md"}
         ${small ? "py-2 px-3" : "py-3"}
         ${small ? "font-semibold" : "font-semibold"}
         ${small ? "border-[1px]" : "border-2"}
         ${arrow ? "pr-6" : ""}
-        ${none ? "border-none bg-transparent hover:" : ""}
-      `}
+     `}
     >
       {Icon && (
         <Icon
-        size={24}
-        className={`
-          ${label ? 'absolute left-4 top-3' : ''}
+          size={24}
+          className={`
+          ${label ? "absolute left-4 top-3" : ""}
         `}
-          
         />
       )}
       {label}
