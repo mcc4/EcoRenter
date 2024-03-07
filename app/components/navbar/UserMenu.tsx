@@ -51,7 +51,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
            
           "
         >
-          <Button label="Rent your items" onClick={onRent} outline small arrow />
+          <Button
+            label="Rent your items"
+            onClick={onRent}
+            outline
+            small
+            arrow
+          />
         </div>
         <div
           onClick={toggleOpen}
@@ -111,11 +117,15 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   label="My rental items"
                   onClick={() => router.push("/properties")}
                 />
-                <MenuItem 
-                className="relative flex items-center group"
-                label="Rent your items" onClick={rentModal.onOpen}> <BiChevronRight
-          size={24}
-          className="
+                <MenuItem
+                  className="relative flex items-center group"
+                  label="Rent your items"
+                  onClick={rentModal.onOpen}
+                >
+                  {" "}
+                  <BiChevronRight
+                    size={24}
+                    className="
       absolute
       right-6
       top-auto
@@ -123,7 +133,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
       group-hover:right-4
       transition-all
     "
-        />
+                  />
                 </MenuItem>
                 <hr />
                 <MenuItem label="Logout" onClick={() => signOut()} />
